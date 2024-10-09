@@ -15,6 +15,10 @@ button {
 
 .main-header {
   padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px 0 #0002;
 }
 
 .logo {
