@@ -33,6 +33,10 @@ button {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+
+  @media (width >= 500px) {
+    display: none;
+  }
 }
 
 .burger-line {
