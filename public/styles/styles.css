@@ -13,6 +13,10 @@ body {
   color: #181818;
 }
 
+a {
+  color: inherit;
+}
+
 button {
   background: none;
   border: none;
@@ -27,6 +31,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   box-shadow: 0 2px 8px 0 #0002;
 }
 
@@ -77,5 +82,57 @@ button {
 
   @media (width >= 500px) {
     display: inline-block;
+  }
+}
+
+.main-navigation-container {
+  display: none;
+  flex: 1;
+  justify-content: flex-end;
+
+  @media (width >= 500px) {
+    display: flex;
+  }
+}
+
+.main-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+
+  .main-navigation-link {
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+      color: var(--brand-color);
+    }
+  }
+}
+
+.main-navigation-link-container {
+  position: relative;
+
+  &::after {
+    display: none;
+    content: "";
+    height: 3px;
+    background-color: var(--brand-color);
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+  }
+
+  &:hover {
+    &::after {
+      display: inline-block;
+    }
   }
 }
